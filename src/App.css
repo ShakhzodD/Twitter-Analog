@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+body{
+    background-color: #1DA1F3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+    margin: 50px auto;
+    max-width: 800px;
+    box-shadow: 1px 8px 16px rgba(0, 0, 0, .6);
+    background-color: #fff;
+    padding:20px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-header {
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-header h1 {
+    font-size: 26px;
 }
 
-.App-link {
-  color: #61dafb;
+.app-header h2 {
+    font-size: 1.2rem;
+    color: grey;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bottom-panel {
+    margin-top: 20px;
 }
+
+.bottom-panel .new-post-label {
+    width: auto;
+    flex-grow: 1;
+    margin-right: 3px;
+}
+
+.app-list {
+    margin-top: 50px;
+}
+
+.app-list .list-group-item{
+    padding: 20px 35px 10px 35px;
+    margin-top: 10px;
+}
+
+.app-list-item {
+    font-size: 1.25rem;
+}
+
+.app-list-item button {
+    width: 35px;
+    height: 35px;
+    margin: 3px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.app-list-item button:focus{
+    box-shadow: none;
+    overflow: none;
+}
+
+.app-list-item .btn-star {
+    color: #FFD700;
+}
+.app-list-item .btn-trash {
+    color:red;  
+}
+.app-list-item .fa-heart {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+    align-items: center;    
+    opacity: 0;
+    color:#ff0000;
+}
+
+.app-list-item.like .fa-heart {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.app-list-item .app-list-item-label {
+    cursor: pointer;
+}
+
+.app-list-item.important .app-list-item-label {
+    color: #FFD700;
+}
+.app-list-item.important .btn-star {
+    color: #aeaeae;
+}
+.search-panel .search-input {
+    width: auto;
+    flex-grow: 1;
+    margin-right:3px;
+}  
